@@ -34,7 +34,7 @@ function init() {
     /**
     * Funciones
     */
-    
+
     // Funcion para descargar el canvas como una imagen
     function downloadImage() {
         let link = document.createElement('a');
@@ -49,7 +49,7 @@ function init() {
         let file = e.target.files[0];
         let reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = readerEvent => {
+        reader.addEventListener("load", function (readerEvent) {
             let content = readerEvent.target.result;
             let image = new Image();
             image.src = content;
@@ -57,7 +57,7 @@ function init() {
             let imageScaledWidth;
             let imageScaledHeight;
             let oldImage;
-            image.onload = function () {
+            image.addEventListener("load", function () {
                 if (this.width > this.height) {
                     imageAspectRatio = (1.0 * this.height) / this.width;
                     imageScaledWidth = canvas.width;
@@ -71,8 +71,8 @@ function init() {
                 let imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
                 oldImage = imageData;
                 ctx.putImageData(imageData, 0, 0);
-            }
-        }
+            });
+        });
     }
 
     // Funcion para limpiar el lienzo
