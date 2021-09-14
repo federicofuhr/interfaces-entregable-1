@@ -29,7 +29,7 @@
                 <i class="bi bi-pencil"></i>
                 Lápiz
             </button>
-            <input type="color" class="form-control form-control-color" id="pencil-color" value="black"
+            <input type="color" class="" id="pencil-color" value="black"
                 title="Choose your color">
             <button class="btn" id="btn-eraser">
                 <i class="bi bi-eraser"></i>
@@ -42,9 +42,23 @@
             <button type="button" id="sepia-filter" class="btn btn-primary">Sepia</button>
             <button type="button" id="blur-filter" class="btn btn-primary">Desenfoque</button>
             <button type="button" id="hsl-filter" class="btn btn-primary">HSL</button>
-          </div>
-        <div class="div-canvas">
-            <canvas width="900" height="600" id="canvas"></canvas>
+        </div>
+        <div class="row">
+            <div class="div-canvas sm-col-8">
+                <canvas width="900" height="600" id="canvas"></canvas>
+            </div>
+            <div class="sm-col-4 collapse" id="hsv-controls">
+                <label for="h-range">Matiz</label>
+                <input type="range" name="range" id="h-range" data-component="saturation" min="-360" max="360"
+                    value="0">
+                <label for="s-range">Saturación</label>
+                <input type="range" name="range" id="s-range" data-component="saturation" min="-100" max="100"
+                    value="0">
+                <label for="l-range">Brillo</label>
+                <input type="range" name="range" id="l-range" data-component="saturation" min="-100" max="100"
+                    value="0">
+                <button id="hsl-apply">Aplicar</button>
+            </div>
         </div>
     </div>
 
