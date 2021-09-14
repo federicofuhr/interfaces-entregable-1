@@ -24,6 +24,7 @@
         </div>
         <div>
             <button class="btn btn-primary" id="btn-clear">Nuevo</button>
+            <button class="btn btn-primary" id="btn-image-recovery">Original</button>
             <button class="btn" id="btn-pencil">
                 <i class="bi bi-pencil"></i>
                 Lápiz
@@ -35,6 +36,13 @@
                 Goma
             </button>
         </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" id="grayscale-filter" class="btn btn-primary">Binarizacion</button>
+            <button type="button" id="negative-filter" class="btn btn-primary">Negativo</button>
+            <button type="button" id="sepia-filter" class="btn btn-primary">Sepia</button>
+            <button type="button" id="blur-filter" class="btn btn-primary">Desenfoque</button>
+            <button type="button" id="hsl-filter" class="btn btn-primary">HSL</button>
+          </div>
         <div class="div-canvas">
             <canvas width="900" height="600" id="canvas"></canvas>
         </div>
