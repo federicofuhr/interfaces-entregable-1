@@ -82,7 +82,6 @@ function init() {
 
     // Evento para el filtro de desenfoque
     btnBlur.addEventListener("click", function () {
-        //ctx.drawImage(originalImage, 0, 0, imageScaledWidth, imageScaledHeight);
         imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
         roamImage(imageData, applyBlurFilter);
         ctx.putImageData(imageData, 0, 0);
@@ -90,7 +89,6 @@ function init() {
 
     // Evento para el filtro de binarizacion
     btnGrayscale.addEventListener("click", function () {
-        //ctx.drawImage(originalImage, 0, 0, imageScaledWidth, imageScaledHeight);
         imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
         roamImage(imageData, applyGrayFilter);
         ctx.putImageData(imageData, 0, 0);
@@ -98,7 +96,6 @@ function init() {
 
     // Evento para el filtro negativo
     btnNegative.addEventListener("click", function () {
-        //ctx.drawImage(originalImage, 0, 0, imageScaledWidth, imageScaledHeight);
         imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
         roamImage(imageData, applyNegativeFilter);
         ctx.putImageData(imageData, 0, 0);
@@ -106,7 +103,6 @@ function init() {
 
     // Evento para el filtro sepia
     btnSepia.addEventListener("click", function () {
-        //ctx.drawImage(originalImage, 0, 0, imageScaledWidth, imageScaledHeight);
         imageData = ctx.getImageData(0, 0, imageScaledWidth, imageScaledHeight);
         roamImage(imageData, applySepiaFilter);
         ctx.putImageData(imageData, 0, 0);
@@ -120,7 +116,6 @@ function init() {
     //Evento para aplicar los cambios al HSL
     btnApplyHSL.addEventListener('click', () => {
         // Creo la imagen para aplicar el filtro de hsl
-        //ctx.drawImage(originalImage, 0, 0, imageScaledWidth, imageScaledHeight);
         imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
         roamImage(imageData, adjustHSL);
         ctx.putImageData(imageData, 0, 0);
